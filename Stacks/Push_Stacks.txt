@@ -1,0 +1,14 @@
+1. Check if the Stack Is Full:
+    Before pushing an element onto the stack, we need to ensure that there is enough space.
+    If the stack is already full (i.e., the top pointer is at the maximum capacity), we display an “Overflow” message.
+
+2. If Not Full, Increment the Top Pointer:
+    If the stack is not full, we increment the top pointer to indicate that we are adding an element.
+    The new top pointer position will be TOP + 1.
+    
+3. Add the New Element to the Stack:
+    We insert the new element (let’s call it X) into the position pointed to by the updated top pointer.
+    In an array-based implementation, this means storing X in the array at index TOP.
+    
+4. Exit:
+    The push operation is complete 

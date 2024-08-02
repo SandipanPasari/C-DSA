@@ -1,0 +1,7 @@
+1. We will check if the stack is empty:
+    If the stack is empty we will not be able to return any value from the peek stack so we need to ensure if there is any element present or not.
+
+2. If the element is not empty we will simple return the top value.
+
+3. Exit:
+    The peak operation is over.

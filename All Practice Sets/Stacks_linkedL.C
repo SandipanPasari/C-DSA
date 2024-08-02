@@ -1,26 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 4
-
-int stack_arr[MAX];
-int top = -1;
-
-int isFull()
+struct node
 {
-    if (top == MAX - 1)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
+    int data;
+    struct node *link;
+} *top = NULL;
 
 int isEmpty()
 {
-    if (top == -1)
+    if (top == NULL)
     {
         return 1;
     }
@@ -32,25 +21,33 @@ int isEmpty()
 
 void push(int data)
 {
-    if (top == MAX - 1)
+    struct node *newnode = (struct node *)malloc(sizeof(newnode));
+    if(newnode == NULL)
     {
         printf("Stack Overflow");
-        return;
+        exit(1);
     }
-    top = top + 1;
-    stack_arr[top] = data;
+    newnode->data = data;
+    newnode->link = NULL;
+
+    newnode->link = top;
+    top = newnode;
 }
 
 int pop()
 {
+    struct node *temp;
     int value;
-    if (top == -1)
+    if(isEmpty())
     {
-        printf("Stack Underflow\n");
+        printf("Stack Underflow");
         exit(1);
     }
-    value = stack_arr[top];
-    top = top - 1;
+    temp = top;
+    value = temp->data;
+    top = top->link;
+    free(temp);
+    temp = NULL;
     return value;
 }
 
@@ -58,42 +55,44 @@ int peek()
 {
     if (isEmpty())
     {
-        printf("Stack Underflow\n");
+        printf("Stack Underflow");
         exit(1);
     }
-    return stack_arr[top];
+    return top->data;
 }
 
 void print()
 {
-    printf("\n");
-    int i;
-    if (top == -1)
+    struct node *ptr;
+    ptr = top;
+    if (isEmpty())
     {
         printf("Stack Underflow");
-        return;
+        exit(1);
     }
-    for (i = top; i >= 0; i--)
+    printf("The elements of the stack are : ");
+    while (ptr != NULL)
     {
-        printf("%d ", stack_arr[i]);
+        printf("%d ", ptr->data);
+        ptr = ptr->link;
     }
     printf("\n");
 }
 
 int main()
 {
+    printf("\n");
     int choice, data;
     while (1)
     {
-        printf("\n");
         printf("1. Push\n");
         printf("2. Pop\n");
         printf("3. Print the top element\n");
-        printf("4. Print all the elements of stack\n");
+        printf("4. Print all the elements of the stack\n");
         printf("5. Quit\n");
-        printf("Enter Your Choice : ");
+        printf("Enter your choice : ");
         scanf("%d", &choice);
-
+        printf("\n");
         switch (choice)
         {
         case 1:
@@ -103,7 +102,7 @@ int main()
             break;
         case 2:
             data = pop();
-            printf("Deleted element is %d\n", data);
+            printf("Deleted Element is %d\n", data);
             break;
         case 3:
             printf("The topmost element of the stack is %d\n", peek());
@@ -114,6 +113,8 @@ int main()
         case 5:
             exit(1);
             break;
+        default:
+            printf("Wrong Choice");
         }
     }
     return 0;

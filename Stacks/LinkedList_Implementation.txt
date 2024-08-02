@@ -1,0 +1,24 @@
+1. Node Structure:
+    Define a structure for the linked list nodes. Each node should have two fields:
+    data: The actual value (element) stored in the stack.
+    next: A pointer to the next node in the linked list.
+
+2. Initialization:
+    Initialize an empty stack by setting the head pointer (top) to NULL.
+
+3. Push Operation (Add an Element):
+    To push an element onto the stack Create a new node with the given data.
+    Set the new node’s next pointer to the current top (head) of the stack.
+    Update the top pointer to point to the new node
+
+4. Pop Operation (Remove an Element):
+    To pop an element from the stack Check if the stack is empty (i.e., if the top pointer is NULL). If not empty, remove the top node.
+    Update the top pointer to point to the next node.
+
+Peek Operation (Get the Top Element):
+    To get the top element without removing it:
+    Check if the stack is empty.
+    If not empty, return the value stored in the top node. 
+
+Display Operation (Print All Elements):
+    Traverse the linked list and print each element (from top to bottom).`
