@@ -1,0 +1,115 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+
+int queue[MAX];
+int front = -1;
+int rear = -1;
+
+void enqueue(int);
+int dequeue();
+int peek();
+void print();
+int isFull();
+int isEmpty();
+
+int main()
+{
+    int choice, data;
+    while (1)
+    {
+        printf("\n1. Insert\n");
+        printf("2. Delete\n");
+        printf("3. Print the first element\n");
+        printf("4. Print all elements\n");
+        printf("5. Quit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+            printf("Enter the element to be added in the Queue: ");
+            scanf("%d", &data);
+            enqueue(data);
+            printf("Element is successfully added to the Queue !!\n");
+            break;
+        case 2:
+            data = dequeue();
+            printf("Element deleted from the queue is %d\n", data);
+            break;
+        case 3:
+            printf("First element of the queue is %d\n", peek());
+            break;
+        case 4:
+            print();
+            break;
+        case 5:
+            exit(0);
+        default:
+            printf("Wrong Choice!!\n");
+        }
+    }
+    return 0;
+}
+
+int isFull()
+{
+    return (rear == MAX - 1);
+}
+
+int isEmpty()
+{
+    return (front == -1 || front > rear);
+}
+
+void enqueue(int data)
+{
+    if (isFull())
+    {
+        printf("Queue Overflow");
+        exit(1);
+    }
+    if (front == -1)
+    {
+        front = 0;
+    }
+    rear++;
+    queue[rear] = data;
+}
+
+int dequeue()
+{
+    if (isEmpty())
+    {
+        printf("Queue Underflow");
+        exit(1);
+    }
+    int data = queue[front];
+    front++;
+    return data;
+}
+
+int peek()
+{
+    if (isEmpty())
+    {
+        printf("Queue Underflow\n");
+        exit(1);
+    }
+    return queue[front];
+}
+
+void print()
+{
+    if (isEmpty())
+    {
+        printf("Queue Underflow\n");
+        exit(1);
+    }
+    printf("Queue is : ");
+    for (int i = front; i <= rear; i++)
+    {
+        printf("%d ", queue[i]);
+    }
+    printf("\n");
+}

@@ -85,7 +85,9 @@ int dequeue()
     data = cqueue[front];
     if (front == rear)
     {
-        front = rear - 1;
+        front = rear - 1; 
+        // front = -1;
+        // rear = -1
     }
     else if (front == MAX - 1)
     {
