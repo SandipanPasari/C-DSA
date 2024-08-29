@@ -1,6 +1,10 @@
 {
     "C_Cpp.errorSquiggles": "enabled",
     "files.associations": {
-        "Binary_Tree_Array.C": "cpp"
+        "Binary_Tree_Array.C": "cpp",
+        "hello.C": "cpp",
+        "Array_Implementation_all.C": "cpp",
+        "Linked_List_Trees.C": "cpp",
+        "treeRough.C": "cpp"
     }
 }
