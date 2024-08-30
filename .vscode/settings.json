@@ -5,6 +5,7 @@
         "hello.C": "cpp",
         "Array_Implementation_all.C": "cpp",
         "Linked_List_Trees.C": "cpp",
-        "treeRough.C": "cpp"
+        "treeRough.C": "cpp",
+        "FullNodeDel.C": "cpp"
     }
 }
