@@ -6,6 +6,24 @@
         "Array_Implementation_all.C": "cpp",
         "Linked_List_Trees.C": "cpp",
         "treeRough.C": "cpp",
-        "FullNodeDel.C": "cpp"
+        "FullNodeDel.C": "cpp",
+        "Btl.C": "cpp",
+        "TowerOfHanoi.C": "cpp",
+        "postfixEval.C": "cpp",
+        "Infix_to_Postfix.C": "cpp",
+        "BTA.C": "cpp",
+        "QuickSort.C": "cpp",
+        "Qlab.C": "cpp",
+        "Array_Implementation.C": "cpp",
+        "QClab.C": "cpp",
+        "Circular_Queue.C": "cpp",
+        "LinearSearch.C": "cpp",
+        "ShellSort.C": "cpp",
+        "MergeSort.C": "cpp",
+        "HeapSort.C": "cpp",
+        "BubbleSort.C": "cpp",
+        "bss.C": "cpp",
+        "InsertionSort.C": "cpp",
+        "ins.C": "cpp"
     }
 }
