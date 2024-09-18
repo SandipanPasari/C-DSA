@@ -24,6 +24,9 @@
         "BubbleSort.C": "cpp",
         "bss.C": "cpp",
         "InsertionSort.C": "cpp",
-        "ins.C": "cpp"
+        "ins.C": "cpp",
+        "SelectionSort.C": "cpp",
+        "SS.C": "cpp",
+        "BinarySearch.C": "cpp"
     }
 }
