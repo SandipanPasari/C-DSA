@@ -27,6 +27,7 @@
         "ins.C": "cpp",
         "SelectionSort.C": "cpp",
         "SS.C": "cpp",
-        "BinarySearch.C": "cpp"
+        "BinarySearch.C": "cpp",
+        "arrimpQ.C": "cpp"
     }
 }

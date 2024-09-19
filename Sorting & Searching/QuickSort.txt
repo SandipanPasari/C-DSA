@@ -1,0 +1,7 @@
+Quick sort is a highly efficient sorting algorithm based on the divide-and-conquer approach. 
+Here’s a brief overview of how it works:
+
+1. Choose a Pivot: Select an element from the array to be the pivot. Common choices include the first element, the last element, or a random element.
+2. Partitioning: Rearrange the array so that all elements less than the pivot are on its left, and all elements greater than the pivot are on its right. This step is called partitioning.
+3. Recursively Apply: Apply the same process to the sub-arrays formed by splitting the array at the pivot. This is done recursively until each sub-array contains only one element.
+Combine: Since the sub-arrays are sorted in place, no additional work is needed to combine them. The entire array is now sorted.
