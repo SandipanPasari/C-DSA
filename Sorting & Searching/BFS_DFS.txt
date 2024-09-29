@@ -1,0 +1,11 @@
+Breadth-First Search (BFS) and Depth-First Search (DFS) are two fundamental graph traversal algorithms used in computer science. Here’s a brief overview of each:
+
+Breadth-First Search (BFS):-
+1. Traversal Method: BFS explores the graph level by level, starting from the root node and moving outward. It visits all the neighbors of a node before moving on to their children.
+2. Data Structure: It uses a queue to keep track of the next node to visit.
+3. Use Cases: BFS is ideal for finding the shortest path in an unweighted graph and for scenarios where you need to explore all nodes at the present depth before moving on to nodes at the next depth level
+
+Depth-First Search (DFS):-
+1. Traversal Method: DFS explores as far down a branch as possible before backtracking. It starts at the root node and explores each branch completely before moving on to the next branch.
+2. Data Structure: It uses a stack (or recursion) to keep track of the next node to visit.
+3. Use Cases: DFS is useful for tasks that require exhaustive exploration of all possible paths, such as solving puzzles and maze problems.

@@ -28,6 +28,9 @@
         "SelectionSort.C": "cpp",
         "SS.C": "cpp",
         "BinarySearch.C": "cpp",
-        "arrimpQ.C": "cpp"
+        "arrimpQ.C": "cpp",
+        "Rc.C": "cpp",
+        "StacksOS.C": "cpp",
+        "All_in_One.C": "cpp"
     }
 }
